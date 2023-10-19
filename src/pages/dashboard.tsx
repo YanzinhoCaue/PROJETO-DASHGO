@@ -7,7 +7,7 @@ const Chart = dynamic(() => import('react-apexcharts'), {
   ssr: false,
 });
 
-const options= {
+const options = {
   chart: {
     toolbar: {
       show: false,
@@ -15,7 +15,7 @@ const options= {
     zoom: {
       enabled: false,
     },
-    forColor: theme.colors.gray[500],
+    foreColor: theme.colors.gray[500], // Corrigindo o nome da propriedade
   },
   grid: {
     show: false,
@@ -25,35 +25,9 @@ const options= {
   },
   tooltip: {
     enabled: false,
-  },
-  xaxis: {
-    type: 'datetime',
-    axisBorder: {
-      color: theme.colors.gray[600],
-    },
-    axisTicks: {
-      color: theme.colors.gray[600],
-    },
-    categories: [
-      '2023-09-13t00:00:00.000Z',
-      '2023-09-14t00:00:00.000Z',
-      '2023-09-15t00:00:00.000Z',
-      '2023-09-16t00:00:00.000Z',
-      '2023-09-17t00:00:00.000Z',
-      '2023-09-18t00:00:00.000Z',
-      '2023-09-19t00:00:00.000Z',
-    ]
-  },
-  fill: {
-    opacity: 0.3,
-    type: 'gradient',
-    gradient: {
-      shade: 'dark',
-      opacityFrom: 0.7,
-      opacityTo: 0.3,
-    }
   }
 };
+
 
 const series = [
   { name:'series1', data: [31, 120, 10, 28, 61, 18, 109] }
